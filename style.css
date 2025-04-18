@@ -1,0 +1,683 @@
+/* Basic styles for body, containers, etc. */
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.top-nav {
+    background-color: #FFFEEA;
+    padding: 10px 20px;
+    position: fixed; 
+    width: 100%;
+    top: 0;
+    left: 270px;
+    z-index: 10; 
+    transition: top 0.3s ease; 
+}
+
+.top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Make the list a flex container */
+    justify-content: space-around; /* Distribute items evenly */
+    width: 80%; 
+}
+
+.top-nav li {
+    display: inline-block;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.left-sidebar {
+    position: fixed; /* Keep sidebar fixed */
+    top: 0;
+    left: 0;
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    width: 230px;
+    height: 100vh; /* Make sidebar full viewport height */
+    text-align: center; 
+}
+
+.profile-pic img {
+    margin-top: 4px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.name { /* Styles for the name below the image */
+    margin-bottom: 10px; 
+}
+
+.social-icons {
+    margin-top: 10px;
+    display: flex; /* Add flexbox to align items horizontally */
+    justify-content: space-between; /* Distribute icons evenly */
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 10px;
+    color: white;
+    font-size: 20px; 
+}
+
+.side-nav { /* Styles for the sidebar navigation */
+    margin-top: 47px; 
+}
+
+.side-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.side-nav li {
+    margin-bottom: 27px; 
+    display: flex; /* Use flexbox to align icon and text */
+    align-items: center; /* Vertically align icon and text */
+}
+
+.side-nav i {
+    margin-right: 15px;  /* Increased spacing */
+    font-size: 19px;  /* Increased icon size */
+}
+.side-nav a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+/* Main Content Wrapper */
+.main-content {
+    margin-left: 230px; /* Add left margin to avoid overlap with sidebar */
+    padding: 20px; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero {
+    background-image: url("https://i.ibb.co/jvc4q0W2/IMG-20240704-184745-878.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start; /* Align content to the top to allow manual positioning */
+}
+
+.hero-text {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding-left: 230px; /* Offset by sidebar width */
+    box-sizing: border-box;
+    margin-top: 70vh; /* Position text slightly below center */
+}
+
+.hero-text h1 {
+    font-size: 4em;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.hero-text h2 {
+    font-size: 1.5em;
+    color: #FFA500;
+    margin-bottom: 20px; 
+}
+
+/* About Section Styles */
+.about {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.about .info {
+    text-align: left;
+    margin-left: 70px;
+}
+
+.about .info h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.about .info p {
+    margin-bottom: 10px;
+}
+
+.about .info strong {
+    color: #333;
+}
+
+/* Expertise Section Styles */
+.expertise {
+    padding: 80px 0;
+    background-color: #f8f8f8; 
+}
+
+.expertise h2 {
+    text-align: center;
+    font-size: 3em; 
+    margin-bottom: 30px; 
+}
+
+.expertise-content {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.expertise-item {
+    width: 30%; 
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
+
+.expertise-item h3 {
+    font-size: 1.8em; 
+    margin-bottom: 25px; 
+}
+
+.communication {
+    flex-basis: 31%;
+    max-width: none;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Works Section Styles */
+.works {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.works h2 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+
+.works-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.work-item {
+    width: 30%; 
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.work-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+
+.see-report-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.see-report-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Courses Section Styles */
+.courses {
+    padding: 80px 0;
+    background-color: #f8f8f8;
+}
+
+.courses h2 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+
+.courses p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.courses-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.course-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.course-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 0;
+}
+
+.course-item p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.show-credentials-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    align-self: flex-start;
+}
+
+.show-credentials-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Learning Section Styles */
+.learning {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.learning h2 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+
+.learning-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.learning-item {
+    width: 30%;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.learning-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.progress {
+    width: 100%;
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #007bff;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    transition: width 0.5s ease;
+}
+
+/* Contact Section Styles */
+.contact {
+    padding: 80px 0;
+    background-color: #f8f8f8;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.contact-left, .contact-right {
+    width: 48%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info-item h3 {
+    margin-bottom: 17px;
+    margin-left: 10px;
+}
+
+.info-item p {
+    margin-left: 30px;
+}
+
+.info-item i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.map {
+    border: none;
+}
+
+.map iframe {
+    width: 100%;
+    height: 250px;
+}
+
+/* Form Styles */
+form {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #007bff;
+}
+
+form textarea {
+    resize: none;
+    height: 120px;
+}
+
+button.send-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button.send-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-nav ul {
+        text-align: center;
+    }
+
+    .top-nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .left-sidebar {
+        display: none;
+    }
+
+    .hero-text {
+        padding-left: 0; /* Remove sidebar offset on mobile */
+        margin-top: 60vh; /* Position slightly below center on mobile */
+    }
+
+    .hero-text h1 {
+        font-size: 3em;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5em;
+    }
+
+    .expertise-item,
+    .work-item,
+    .course-item,
+    .learning-item {
+        width: 45%;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-left, .contact-right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Fix About section layout */
+    .about .container {
+        flex-direction: column;
+    }
+
+    .about .image {
+        margin-bottom: 30px;
+    }
+
+    .about .info {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* Reduce padding for all sections */
+    .about,
+    .expertise,
+    .works,
+    .courses,
+    .learning,
+    .contact {
+        padding: 40px 0;
+    }
+
+    /* Works section adjustments */
+    .work-item {
+        padding: 15px;
+    }
+
+    .see-report-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* Courses section adjustments */
+    .course-item {
+        padding: 15px;
+    }
+
+    .show-credentials-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.close-menu {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .top-nav {
+        left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .left-sidebar {
+        display: block;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        width: 250px;
+        height: 100vh;
+        background-color: #000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 20;
+    }
+
+    .left-sidebar.active {
+        transform: translateX(0);
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #000;
+    }
+
+    .left-sidebar.active .close-menu {
+        display: block;
+    }
+}
+
+/* Ensure About section image is responsive on all screens */
+.about .image img {
+    max-width: 325px;
+    width: 100%;
+    height: auto;
+}
+
+/* Adjust item widths for very small screens */
+@media (max-width: 480px) {
+    .expertise-item,
+    .work-item,
+    .course-item,
+    .learning-item {
+        width: 100%;
+    }
+
+    /* Works section adjustments */
+    .work-item {
+        padding: 10px;
+    }
+
+    .see-report-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    /* Courses section adjustments */
+    .course-item {
+        padding: 10px;
+    }
+
+    .show-credentials-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
